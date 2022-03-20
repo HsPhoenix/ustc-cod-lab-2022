@@ -37,6 +37,7 @@
 *.sdk
 *.hw
 *.ip_user_files
+waves
 
 ### IP synth
 *_synth_*
