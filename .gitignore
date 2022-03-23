@@ -38,6 +38,7 @@
 *.hw
 *.ip_user_files
 waves
+coes
 
 ### IP synth
 *_synth_*
