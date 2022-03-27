@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module alu #(parameter WIDTH = 32)  // 数据位宽
+module alu #(parameter WIDTH = 32)  // data width
 (
-    input [WIDTH - 1:0] a, b,       // 两操作数
-    input [2:0] f,                  // 操作功能
-    output reg [WIDTH - 1:0] y,         // 运算结果
-    output z                        // 零标志
+    input [WIDTH - 1:0] a, b,       // operands
+    input [2:0] f,                  // operation
+    output reg [WIDTH - 1:0] y,     // output
+    output z                        // zero
 );
     assign z = (y == {WIDTH{1'h0}});
     always @(*) begin

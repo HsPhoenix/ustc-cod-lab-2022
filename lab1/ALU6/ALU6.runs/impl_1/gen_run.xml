@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1647751705">
-  <File Type="OPT-HWDEF" Name="main.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="main_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="main.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1648377946">
   <File Type="BITSTR-BMM" Name="main_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="main_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="main_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="main_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
   <File Type="OPT-DRC" Name="main_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="main.hwdef"/>
   <File Type="PWROPT-DCP" Name="main_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="main_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="main_timing_summary_pwropted.rpt"/>
@@ -24,6 +22,7 @@
   <File Type="PLACE-CTRL" Name="main_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="main_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="main_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="main.bgn"/>
   <File Type="PLACE-TIMING" Name="main_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="main_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="main.bin"/>
@@ -53,6 +52,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="main_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="main_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="main_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="main_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="main_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="main_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="main_postroute_physopt.dcp"/>
@@ -66,7 +66,6 @@
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="main_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="main.rbt"/>
   <File Type="BITSTR-NKY" Name="main.nky"/>
-  <File Type="BG-BGN" Name="main.bgn"/>
   <File Type="BG-DRC" Name="main.drc"/>
   <File Type="RDI-RDI" Name="main.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
