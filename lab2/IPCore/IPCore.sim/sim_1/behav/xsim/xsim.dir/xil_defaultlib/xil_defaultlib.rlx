@@ -1,0 +1,8 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.srcs/sim_1/new/testbench.v,1648622957,verilog,,,,tb,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.srcs/sources_1/ip/block_ram/sim/block_ram.v,1648622899,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.srcs/sim_1/new/testbench.v,,block_ram,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.srcs/sources_1/ip/distributed_ram/sim/distributed_ram.v,1648621970,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/IPCore/IPCore.srcs/sources_1/ip/block_ram/sim/block_ram.v,,distributed_ram,,,,,,,,

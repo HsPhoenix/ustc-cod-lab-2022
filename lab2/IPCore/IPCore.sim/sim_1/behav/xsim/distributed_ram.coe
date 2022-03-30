@@ -1,0 +1,2 @@
+memory_initialization_radix=16;
+memory_initialization_vector=0F 1E 2D 3C 4B 5A 69 78 87 96 A5 B4 C3 D2 E1 F0;
