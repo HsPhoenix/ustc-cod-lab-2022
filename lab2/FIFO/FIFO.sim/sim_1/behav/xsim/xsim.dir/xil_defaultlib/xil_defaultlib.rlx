@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sim_1/new/testbench.v,1648623287,verilog,,,,tb,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/FIFO.v,1648366519,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/ListControlUnit.v,,fifo,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/ListControlUnit.v,1648366164,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/RegisterFile.v,,list_control_unit,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/RegisterFile.v,1649165257,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/SegDisplayUnit.v,,reg_file,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/SegDisplayUnit.v,1648614383,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/SignalEdge.v,,segplay_unit,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sources_1/new/SignalEdge.v,1648366083,verilog,,D:/Users/Documents/GitHub/COD_lab/lab2/FIFO/FIFO.srcs/sim_1/new/testbench.v,,sig_edge,,,,,,,,

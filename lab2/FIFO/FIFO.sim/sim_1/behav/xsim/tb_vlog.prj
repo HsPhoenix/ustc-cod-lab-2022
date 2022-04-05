@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FIFO.srcs/sources_1/new/FIFO.v" \
+"../../../../FIFO.srcs/sources_1/new/ListControlUnit.v" \
+"../../../../FIFO.srcs/sources_1/new/RegisterFile.v" \
+"../../../../FIFO.srcs/sources_1/new/SegDisplayUnit.v" \
+"../../../../FIFO.srcs/sources_1/new/SignalEdge.v" \
+"../../../../FIFO.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
