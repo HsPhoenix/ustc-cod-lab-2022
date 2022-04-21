@@ -1,0 +1,16 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sim_1/new/testbench.v,1650214499,verilog,,,,tb,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/ip/data_mem/sim/data_mem.v,1650179680,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,,data_mem,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,1650211466,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/ALU.v,,inst_mem,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/ALU.v,1650187442,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/ALU_control.v,,alu,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/ALU_control.v,1650187838,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/CPU.v,,alu_control,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/CPU.v,1650213387,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Control.v,,cpu,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Control.v,1650214307,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Imm_Gen_Control.v,,control,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Imm_Gen_Control.v,1650211869,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Main.v,,imm_gen_control,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Main.v,1650207467,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/PDU.v,,main,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/PDU.v,1650179897,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Reg_File.v,,pdu,,,,,,,,
+D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/new/Reg_File.v,1650197988,verilog,,D:/Users/Documents/GitHub/COD_lab/lab4/CPU_single_cycle/CPU_single_cycle.srcs/sim_1/new/testbench.v,,regfile,,,,,,,,
