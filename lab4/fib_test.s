@@ -1,85 +1,37 @@
 .text
-    addi x1, x0, 1    #x1=1
-    add t1, x0, x0    #store fib series @t1
+start:
+    # test for auipc, addi, jal
+    auipc   t0, 0x12342     # t0 <- 0x12345000
+    addi    x1, x0, 1       # x1 <- 1
+    sw      t0, 0x408(x0)   # echo t0
+    jal     x2, next_step   # wait for io
 
-#### input f0
-    sw x1, 0x404(x0)  #rdy=1
-l1: 
-    lw t0, 0x410(x0)  #wait vld=1
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
-   
-    beq t0, x0, l1
-    lw s0, 0x40c(x0)  #s0=vin
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv s0, a0         #for debug end
-    
-    sw s0, 0x408(x0)  #out1=f0
-    sw s0, 0(t1)      #store f0
-    addi t1, t1, 4
-    
-    sw x0, 0x404(x0)  #rdy=0
-l2:
-    lw t0, 0x410(x0)  #wait vld=0
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
- 
-    beq t0, x1, l2
-    
-#### input f1
-    sw x1, 0x404(x0)  #rdy=1
-l3:
-    lw t0, 0x410(x0)  #wait vld=1
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
- 
-    beq t0, x0, l3
-    lw s1, 0x40c(x0)  #s1=vin
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv s1, a0         #for debug end
-     
-    sw s1, 0x408(x0)  #out1=f1
-    sw s1, 0(t1)      #store f1
-    addi t1, t1, 4
-   
-    sw x0, 0x404(x0)  #rdy=0
-l4:
-    lw t0, 0x410(x0)  #wait vld=0
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
- 
-    beq t0, x1, l4 
-      
-#### comput fi = fi-2 + fi-1
-next:
-    add t0, s0, s1    #fi
-    sw t0, 0x408(x0)  #out1=fi
-    sw t0, 0(t1)      #store fi
-    addi t1, t1, 4
+    # test for add, sub
+    addi    t1, x0, 0x24    # t1 <- 0x24
+    addi    t2, x0, 0x13    # t2 <- 0x13
+    add     t3, t1, t2      # t3 <- 0x37
+    sw      t3, 0x408(x0)   # echo t3
+    jal     x2, next_step   # wait for io
+    sub     t3, t1, t2      # t3 <- 0x11
+    sw      t3, 0x408(x0)   # echo t3
+    jal     x2, next_step   # wait for io
 
-    add s0, x0, s1
-    add s1, x0, t0
+    # test for lw, sw
+    sw      t0, 0x000(x0)   # mem[0] <- 0x12345000
+    jal     x2, next_step   # wait for io
+    lw      t3, 0x000(x0)   # t3 <- mem[0]
+    sw      t3, 0x408(x0)   # echo t3
+    jal     x2, next_step   # wait for io
+    jal     x0, start
 
-    sw x1, 0x404(x0)  #rdy=1
-l5:
-    lw t0, 0x410(x0)  #wait vld=1
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
- 
-    beq t0, x0, l5
-    sw x0, 0x404(x0)  #rdy=0
-l6:
-    lw t0, 0x410(x0)  #wait vld=0
-#    addi a7, x0, 5    #for debug begin
-#    ecall
-#    mv t0, a0         #for debug end
- 
-    beq t0, x1, l6
-    jal x0, next       
+# test for blt, beq, jalr
+next_step:
+    sw      x0, 0x404(x0)   # set ready bit
+poll_up:
+    lw      t3, 0x410(x0)
+    blt     t3, x1, poll_up
+poll_down:
+    lw      t3, 0x410(x0)
+    beq     t3, x1, poll_down
+    sw      x1, 0x404(x0)   # reset ready bit
+    jalr    x0, x2, 0

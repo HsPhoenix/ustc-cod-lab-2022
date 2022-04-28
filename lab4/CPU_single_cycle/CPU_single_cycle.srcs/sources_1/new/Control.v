@@ -22,12 +22,12 @@
 
 module control (
     input       [6:0] inst,
-    output reg  [2:0] Imm_Gen,
-    output reg  [1:0] RegSrc,
-    output      [1:0] ALUop,
     output            jal,
     output            jalr,
     output            Branch,
+    output reg  [2:0] Imm_Gen,
+    output reg  [1:0] RegSrc,
+    output      [1:0] ALUop,
     output            MemWrite,
     output            ALUSrc,
     output            RegWrite

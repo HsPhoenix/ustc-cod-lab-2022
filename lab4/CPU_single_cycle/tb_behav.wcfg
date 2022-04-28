@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6972521fs"></ZoomEndTime>
-      <Cursor1Time time="9795000fs"></Cursor1Time>
+      <ZoomEndTime time="86982751fs"></ZoomEndTime>
+      <Cursor1Time time="58577000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="223"></NameColumnWidth>
-      <ValueColumnWidth column_width="236"></ValueColumnWidth>
+      <NameColumnWidth column_width="156"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="43" />
+   <WVObjectSize size="36" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,18 +32,6 @@
       <obj_property name="ElementShortName">sw[7:0]</obj_property>
       <obj_property name="ObjectShortName">sw[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/led" type="array">
-      <obj_property name="ElementShortName">led[7:0]</obj_property>
-      <obj_property name="ObjectShortName">led[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/an" type="array">
-      <obj_property name="ElementShortName">an[2:0]</obj_property>
-      <obj_property name="ObjectShortName">an[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/d" type="array">
-      <obj_property name="ElementShortName">d[3:0]</obj_property>
-      <obj_property name="ObjectShortName">d[3:0]</obj_property>
-   </wvobject>
    <wvobject type="divider" fp_name="divider79">
       <obj_property name="label">CPU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -52,61 +40,17 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/test/CPU/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/io_din" type="array">
-      <obj_property name="ElementShortName">io_din[31:0]</obj_property>
-      <obj_property name="ObjectShortName">io_din[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/io_addr" type="array">
-      <obj_property name="ElementShortName">io_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">io_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/io_dout" type="array">
-      <obj_property name="ElementShortName">io_dout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">io_dout[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/io_we" type="logic">
-      <obj_property name="ElementShortName">io_we</obj_property>
-      <obj_property name="ObjectShortName">io_we</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/m_rf_addr" type="array">
-      <obj_property name="ElementShortName">m_rf_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">m_rf_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/rf_data" type="array">
-      <obj_property name="ElementShortName">rf_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rf_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/m_data" type="array">
-      <obj_property name="ElementShortName">m_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">m_data[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb/test/CPU/pc" type="array">
       <obj_property name="ElementShortName">pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/test/CPU/new_pc" type="array">
-      <obj_property name="ElementShortName">new_pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">new_pc[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/next_pc" type="array">
-      <obj_property name="ElementShortName">next_pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">next_pc[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/added_pc" type="array">
-      <obj_property name="ElementShortName">added_pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">added_pc[31:0]</obj_property>
+   <wvobject fp_name="/tb/test/CPU/inst" type="array">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/test/CPU/PCSrc" type="array">
       <obj_property name="ElementShortName">PCSrc[1:0]</obj_property>
       <obj_property name="ObjectShortName">PCSrc[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test/CPU/inst" type="array">
-      <obj_property name="ElementShortName">inst[31:0]</obj_property>
-      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/test/CPU/Imm_Gen" type="array">
       <obj_property name="ElementShortName">Imm_Gen[2:0]</obj_property>
@@ -191,5 +135,45 @@
    <wvobject fp_name="/tb/test/CPU/load_data" type="array">
       <obj_property name="ElementShortName">load_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider350">
+      <obj_property name="label">RegFile</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[28]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[28][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[28][31:0]</obj_property>
+      <obj_property name="label">t3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[7]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+      <obj_property name="label">t2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[6]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+      <obj_property name="label">t1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[5]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[5][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+      <obj_property name="label">t0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[2]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+      <obj_property name="label">x2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test/CPU/RegFile/rf[1]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+      <obj_property name="label">x1</obj_property>
    </wvobject>
 </wave_config>

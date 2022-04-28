@@ -41,17 +41,9 @@ module tb();
         clk = 0;
         btn = 0;
         sw  = 8'b10000000;
-        #2
-        sw = 8'b01100010;
-        #20
-        sw = 8'b01000011;
-        #20
-        sw = 8'b01100011;
-        #20
-        sw = 8'b01000010;
-        #20
-        $finish;
+        #2 sw[7:6] = 2'b01;
+        #200 $finish;
     end
     always #1 clk = ~clk;
-
+    always #8 sw[5] = ~sw[5];
 endmodule
