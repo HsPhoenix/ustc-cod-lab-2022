@@ -210,7 +210,7 @@ module cpu(
     always @(*) begin
         case (forward_1)
             2'b00:   alu_in_1 = IDEX_reg_1;
-            2'b01:   alu_in_1 = MEMWB_mem_out;
+            2'b01:   alu_in_1 = WB_data;
             2'b10:   alu_in_1 = EXMEM_alu_out;
             default: alu_in_1 = 32'h0;
         endcase
@@ -218,7 +218,7 @@ module cpu(
     always @(*) begin
         case (forward_2)
             2'b00:   EX_reg_2 = IDEX_reg_2;
-            2'b01:   EX_reg_2 = MEMWB_mem_out;
+            2'b01:   EX_reg_2 = WB_data;
             2'b10:   EX_reg_2 = EXMEM_alu_out;
             default: EX_reg_2 = 32'h0;
         endcase
