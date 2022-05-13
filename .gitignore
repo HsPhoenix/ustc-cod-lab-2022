@@ -29,6 +29,7 @@
 
 # [dir]
 .vscode
+.VSCodeCounter
 *.cache
 .metadata
 *.data
