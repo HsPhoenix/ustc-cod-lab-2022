@@ -49,11 +49,12 @@ module tb();
     wire [4:0]  MEMWB_rd;
     wire [31:0] MEMWB_ctrl;
 
+    initial #55 $finish;
     initial begin
         clk      <= 1'b0;
         rst      <= 1'b1;
         dbg_addr <= 8'h06;
-        io_din   <= 32'h0;
+        io_din   <= 32'h1F;
         #2
         rst      <= 1'b0;
     end

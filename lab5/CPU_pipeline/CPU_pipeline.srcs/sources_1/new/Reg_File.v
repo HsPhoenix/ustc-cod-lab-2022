@@ -39,20 +39,20 @@ module regfile (
     end
 
     always @(*) begin
-        if (ra1 == 5'h0) rd1 = 32'h0;
+        if (ra1 == 5'h0)    rd1 = 32'h0;
         else if (ra1 == wa) rd1 = wd;
-        else rd1 = rf[ra1];
+        else                rd1 = rf[ra1];
     end
 
     always @(*) begin
-        if (ra2 == 5'h0) rd2 = 32'h0;
+        if (ra2 == 5'h0)    rd2 = 32'h0;
         else if (ra2 == wa) rd2 = wd;
-        else rd2 = rf[ra2];
+        else                rd2 = rf[ra2];
     end
 
     always @(*) begin
-        if (ra3 == 5'h0) rd3 = 32'h0;
+        if (ra3 == 5'h0)    rd3 = 32'h0;
         else if (ra3 == wa) rd3 = wd;
-        else rd3 = rf[ra3];
+        else                rd3 = rf[ra3];
     end
 endmodule
