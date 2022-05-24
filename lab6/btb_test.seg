@@ -1,0 +1,43 @@
+Address     Code        Basic                        Line Source
+
+0x00003000  0x123455b7  lui x11,0x00012345           4    lui   x11, 0x12345 # x11 = 0x12345000 305,418,240
+0x00003004  0x12345617  auipc x12,0x00012345         5    auipc x12, 0x12345 # x12 = 0x12348004 305,430,532
+0x00003008  0x00100093  addi x1,x0,1                 8    addi  x1,  x0, 1  # x1 =  0x00000001             1
+0x0000300c  0x00109113  slli x2,x1,1                 9    slli  x2,  x1, 1  # x2 =  0x00000002             2
+0x00003010  0x402081b3  sub x3,x1,x2                 10   sub   x3,  x1, x2 # x3 =  0xFFFFFFFF            -1
+0x00003014  0x0021d233  srl x4,x3,x2                 11   srl   x4,  x3, x2 # x4 =  0x3FFFFFFF 1,073,741,823
+0x00003018  0x4021d293  srai x5,x3,2                 12   srai  x5,  x3, 2  # x5 =  0xFFFFFFFF            -1
+0x0000301c  0x0042a333  slt x6,x5,x4                 13   slt   x6,  x5, x4 # x6 =  0x00000001             1
+0x00003020  0x0042b3b3  sltu x7,x5,x4                14   sltu  x7,  x5, x4 # x7 =  0x00000000             0
+0x00003024  0x0012e433  or x8,x5,x1                  15   or    x8,  x5, x1 # x8 =  0xFFFFFFFF            -1
+0x00003028  0x0012f4b3  and x9,x5,x1                 16   and   x9,  x5, x1 # x9 =  0x00000001             1
+0x0000302c  0x0012c533  xor x10,x5,x1                17   xor   x10, x5, x1 # x10 = 0xFFFFFFFE            -2
+0x00003030  0x070006ef  jal x13,0x00000070           20   jal x13, jal_test # x13 = 0x00003034
+0x00003034  0x00108463  beq x1,x1,0x00000008         23   beq  x1, x1, bne_test
+0x00003038  0x00100a93  addi x21,x0,1                24   addi x21, x0, 1       # if beq failed, x21 = 1
+0x0000303c  0x00009463  bne x1,x0,0x00000008         26   bne  x1, x0, blt_test
+0x00003040  0x00100b13  addi x22,x0,1                27   addi x22, x0, 1       # if bne failed, x22 = 1
+0x00003044  0x00104463  blt x0,x1,0x00000008         29   blt  x0, x1, bge_test
+0x00003048  0x00100b93  addi x23,x0,1                30   addi x23, x0, 1       # if blt failed, x23 = 1
+0x0000304c  0x0000d463  bge x1,x0,0x00000008         32   bge  x1, x0, bltu_test
+0x00003050  0x00100c13  addi x24,x0,1                33   addi x24, x0, 1       # if bge failed, x24 = 1
+0x00003054  0x00326463  bltu x4,x3,0x00000008        35   bltu x4, x3, bgeu_test
+0x00003058  0x00100c93  addi x25,x0,1                36   addi x25, x0, 1       # if bltu failed, x25 = 1
+0x0000305c  0x0041f463  bgeu x3,x4,0x00000008        38   bgeu x3, x4, ls_test
+0x00003060  0x00100d13  addi x26,x0,1                39   addi x26, x0, 1       # if bgeu failed, x26 = 1
+0x00003064  0x123457b7  lui x15,0x00012345           43   li  x15, 0x12345678
+0x00003068  0x67878793  addi x15,x15,0x00000678           
+0x0000306c  0xfff00813  addi x16,x0,0xffffffff       44   li  x16, 0xFFFFFFFF
+0x00003070  0x00f02023  sw x15,0(x0)                 45   sw  x15, 0x000(x0)  # mem[0] = 0x12345678
+0x00003074  0x00f01223  sh x15,4(x0)                 46   sh  x15, 0x004(x0)
+0x00003078  0x00f00323  sb x15,6(x0)                 47   sb  x15, 0x006(x0)
+0x0000307c  0x010003a3  sb x16,7(x0)                 48   sb  x16, 0x007(x0)  # mem[1] = 0xFF785678
+0x00003080  0x00002883  lw x17,0(x0)                 49   lw  x17, 0x000(x0)  # x17 = 0x12345678
+0x00003084  0x00402903  lw x18,4(x0)                 50   lw  x18, 0x004(x0)  # x18 = 0xFF785678
+0x00003088  0x00201983  lh x19,2(x0)                 51   lh  x19, 0x002(x0)  # x19 = 0x00001234
+0x0000308c  0x00601a03  lh x20,6(x0)                 52   lh  x20, 0x006(x0)  # x20 = 0xFFFFFF78
+0x00003090  0x00700d83  lb x27,7(x0)                 53   lb  x27, 0x007(x0)  # x27 = 0xFFFFFFFF
+0x00003094  0x00605e03  lhu x28,6(x0)                54   lhu x28, 0x006(x0)  # x28 = 0x0000FF78
+0x00003098  0x00704e83  lbu x29,7(x0)                55   lbu x29, 0x007(x0)  # x29 = 0x000000FF
+0x0000309c  0xf65ff06f  jal x0,0xffffff64            58   jal x0, start
+0x000030a0  0x00068767  jalr x14,x13,0               61   jalr x14, 0(x13) # x14 = 0x000030A4
