@@ -49,6 +49,8 @@ module tb();
         dbg_addr = 8'h5;
         #3
         rst      = 1'b0;
+        #99997
+        $finish;
     end
 
     always #1 clk = ~clk;

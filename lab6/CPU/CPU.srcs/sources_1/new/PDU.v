@@ -121,18 +121,12 @@ module  pdu(
     end
 
     //读外设端口
-    always @* begin
+    always @(*) begin
         case (io_addr)
             8'h0c:
                 io_din_a = {{27{1'b0}}, in_r};
             8'h10:
                 io_din_a = {{31{1'b0}}, valid_r};
-            8'h14:
-                io_din_a = br_cnt;
-            8'h18:
-                io_din_a = succ_cnt;
-            8'h1c:
-                io_din_a = fail_cnt;
             default:
                 io_din_a = 32'h0000_0000;
         endcase

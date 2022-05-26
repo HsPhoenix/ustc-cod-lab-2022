@@ -60,6 +60,8 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -76,7 +78,7 @@ set rc [catch {
   add_files -quiet D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.runs/synth_1/main.dcp
   read_ip -quiet D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/ip/rom/rom.xci
   read_ip -quiet D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/ip/dual_port_ram/dual_port_ram.xci
-  read_xdc D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL2.xdc
+  read_xdc D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL1.xdc
   link_design -top main -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

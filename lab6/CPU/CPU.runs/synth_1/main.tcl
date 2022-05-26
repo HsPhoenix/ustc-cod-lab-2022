@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,7 +33,10 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/cpu_test.coe
-add_files d:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/btb_test.coe
+add_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/btb_test.coe
+add_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/fib_test.coe
+add_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/bsort.coe
+add_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/coes/random_mem.coe
 read_verilog -library xil_defaultlib {
   D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/new/ALU.v
   D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/new/ALU_Ctrl.v
@@ -63,9 +69,11 @@ set_property used_in_implementation false [get_files -all d:/Users/Documents/Git
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL2.xdc
-set_property used_in_implementation false [get_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL2.xdc]
+read_xdc D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL1.xdc
+set_property used_in_implementation false [get_files D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/constrs_1/new/FPGAOL1.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

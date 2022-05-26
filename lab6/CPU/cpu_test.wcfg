@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="229400001fs"></ZoomEndTime>
-      <Cursor1Time time="113000000fs"></Cursor1Time>
+      <ZoomEndTime time="233453005fs"></ZoomEndTime>
+      <Cursor1Time time="66063000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="220"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="111" />
+   <WVObjectSize size="114" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -67,6 +67,26 @@
    <wvobject fp_name="/tb/test_cpu/btb_fail_cnt" type="array">
       <obj_property name="ElementShortName">btb_fail_cnt[31:0]</obj_property>
       <obj_property name="ObjectShortName">btb_fail_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider287">
+      <obj_property name="label">BTB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test_cpu/BTB/tag" type="array">
+      <obj_property name="ElementShortName">tag[15:0][25:0]</obj_property>
+      <obj_property name="ObjectShortName">tag[15:0][25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test_cpu/BTB/target" type="array">
+      <obj_property name="ElementShortName">target[15:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">target[15:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test_cpu/BTB/valid" type="array">
+      <obj_property name="ElementShortName">valid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">valid[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/test_cpu/BTB/state" type="array">
+      <obj_property name="ElementShortName">state[15:0][1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[15:0][1:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider80">
       <obj_property name="label">CPU</obj_property>
@@ -407,14 +427,6 @@
    <wvobject fp_name="/tb/test_cpu/WB_data" type="array">
       <obj_property name="ElementShortName">WB_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">WB_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test_cpu/IDEX_ctrl" type="array">
-      <obj_property name="ElementShortName">IDEX_ctrl[31:0]</obj_property>
-      <obj_property name="ObjectShortName">IDEX_ctrl[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/test_cpu/EXMEM_ctrl" type="array">
-      <obj_property name="ElementShortName">EXMEM_ctrl[31:0]</obj_property>
-      <obj_property name="ObjectShortName">EXMEM_ctrl[31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider10">
       <obj_property name="label">RegFile</obj_property>

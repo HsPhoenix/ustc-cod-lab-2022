@@ -30,7 +30,6 @@ module id_ex(
     input      [1:0]  alu_1_src,
     input             alu_2_src,
     input             pc_add_src,
-    input             exception,
     input             mem_read,
     input             mem_write,
     input      [1:0]  reg_src,
@@ -51,7 +50,6 @@ module id_ex(
     output reg [1:0]  IDEX_alu_1_src,
     output reg        IDEX_alu_2_src,
     output reg        IDEX_pc_add_src,
-    output reg        IDEX_exception,
     output reg        IDEX_mem_read,
     output reg        IDEX_mem_write,
     output reg [1:0]  IDEX_reg_src,
@@ -75,7 +73,6 @@ module id_ex(
             IDEX_alu_1_src  <= 2'h0;
             IDEX_alu_2_src  <= 1'h0;
             IDEX_pc_add_src <= 1'h0;
-            IDEX_exception  <= 1'h0;
             IDEX_mem_read   <= 1'h0;
             IDEX_mem_write  <= 1'h0;
             IDEX_reg_src    <= 2'h0;
@@ -98,7 +95,6 @@ module id_ex(
             IDEX_alu_1_src  <= alu_1_src;
             IDEX_alu_2_src  <= alu_2_src;
             IDEX_pc_add_src <= pc_add_src;
-            IDEX_exception  <= exception;
             IDEX_mem_read   <= mem_read;
             IDEX_mem_write  <= mem_write;
             IDEX_reg_src    <= reg_src;

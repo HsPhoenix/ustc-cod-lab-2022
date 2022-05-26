@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue May 24 12:16:18 2022
+-- Date        : Tue May 24 12:16:17 2022
 -- Host        : LAPTOP-5ODQCLAT running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/ip/rom/rom_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top rom -prefix
+--               rom_ rom_sim_netlist.vhdl
 -- Design      : rom
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity rom_dist_mem_gen_v8_0_13_rom is
     spo : out STD_LOGIC_VECTOR ( 30 downto 0 );
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_dist_mem_gen_v8_0_13_rom : entity is "dist_mem_gen_v8_0_13_rom";
 end rom_dist_mem_gen_v8_0_13_rom;
 
 architecture STRUCTURE of rom_dist_mem_gen_v8_0_13_rom is
@@ -802,8 +800,6 @@ entity rom_dist_mem_gen_v8_0_13_synth is
     spo : out STD_LOGIC_VECTOR ( 30 downto 0 );
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_dist_mem_gen_v8_0_13_synth : entity is "dist_mem_gen_v8_0_13_synth";
 end rom_dist_mem_gen_v8_0_13_synth;
 
 architecture STRUCTURE of rom_dist_mem_gen_v8_0_13_synth is
@@ -902,8 +898,6 @@ entity rom_dist_mem_gen_v8_0_13 is
   attribute C_SYNC_ENABLE of rom_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of rom_dist_mem_gen_v8_0_13 : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_dist_mem_gen_v8_0_13 : entity is "dist_mem_gen_v8_0_13";
 end rom_dist_mem_gen_v8_0_13;
 
 architecture STRUCTURE of rom_dist_mem_gen_v8_0_13 is

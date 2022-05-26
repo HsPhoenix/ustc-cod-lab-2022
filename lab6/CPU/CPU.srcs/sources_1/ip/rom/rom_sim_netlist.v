@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue May 24 12:16:18 2022
+// Date        : Tue May 24 12:16:17 2022
 // Host        : LAPTOP-5ODQCLAT running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Users/Documents/GitHub/COD_lab/lab6/CPU/CPU.srcs/sources_1/ip/rom/rom_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top rom -prefix
+//               rom_ rom_sim_netlist.v
 // Design      : rom
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -89,7 +89,7 @@ endmodule
 (* C_MEM_INIT_FILE = "rom.mif" *) (* C_MEM_TYPE = "0" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) 
 module rom_dist_mem_gen_v8_0_13
    (a,
     d,
@@ -236,7 +236,6 @@ module rom_dist_mem_gen_v8_0_13
         .spo({\^spo [31:2],\^spo [0]}));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_rom" *) 
 module rom_dist_mem_gen_v8_0_13_rom
    (spo,
     a);
@@ -831,7 +830,6 @@ module rom_dist_mem_gen_v8_0_13_rom
         .O(\spo[9]_INST_0_i_1_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module rom_dist_mem_gen_v8_0_13_synth
    (spo,
     a);
